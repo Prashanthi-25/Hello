@@ -2,6 +2,8 @@ package com.example.application.service;
 
 import com.example.application.model.Movie;
 import com.example.application.repository.MovieRepository;
+
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +20,10 @@ public class MovieService implements IMovieService {
         List<Movie> movies = (List<Movie>) repository.findAll();
 
         return movies;
+    }
+
+    @Override
+    public List<Movie> findByName(String name) {
+        return repository.findByName(name);
     }
 }

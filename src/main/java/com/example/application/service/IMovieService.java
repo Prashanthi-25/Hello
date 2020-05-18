@@ -7,4 +7,6 @@ import java.util.List;
 public interface IMovieService {
 
     List<Movie> findAll();
+    List<Movie> findByName(String name);
+
 }

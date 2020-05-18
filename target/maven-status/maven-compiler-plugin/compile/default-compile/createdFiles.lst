@@ -1,4 +1,3 @@
-com/example/controllers/MovieController.class
 com/example/application/repository/MovieRepository.class
 com/example/application/model/Movie.class
 com/example/application/controllers/MovieController.class
