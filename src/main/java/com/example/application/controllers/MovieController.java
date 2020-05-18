@@ -15,21 +15,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class MovieController {
     @Autowired
     private IMovieService movieService;
+
     // private MovieRepository movieRepository;
-        @RequestMapping(value = "/showMovies")
-public List<Movie> getMovies() {
-return movieService.findAll();
-}
-// @Autowired
-// @RequestMapping(value="/search", method = RequestMethod.GET)
-// public @ResponseBody List<Movie> getMovie(@RequestParam(name="name", required = false, defaultValue = "name") String name) {
-//     return movieService.findByName(name);
-// }
+    @RequestMapping(value = "/showMovies")
+    public List<Movie> getMovies() {
+        return movieService.findAll();
+    }
+
+    // @Autowired
+    // @RequestMapping(value="/search", method = RequestMethod.GET)
+    // public @ResponseBody List<Movie> getMovie(@RequestParam(name="name", required
+    // = false, defaultValue = "name") String name) {
+    // return movieService.findByName(name);
+    // }
 @RequestMapping(value="/search", method = RequestMethod.GET)
 public @ResponseBody List<Movie> getMovie(@RequestParam(name="name", required = true, defaultValue = "name") String name) {
  List<Movie> movie = movieService.findByName(name);
  return movie;
 }
+
+@RequestMapping(value="/filter", method = RequestMethod.GET)
+public @ResponseBody List<Movie> getFilteredMovies(@RequestParam(name="below",required = true,defaultValue ="0.0")float belowRating,
+@RequestParam(name="above",required = true,defaultValue = "10.0") float aboveRating ){
+ return movieService.filterByRating(belowRating,aboveRating); 
 }
-
-
+}

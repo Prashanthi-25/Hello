@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MovieRepository extends CrudRepository<Movie, Long> {
-    @Query("SELECT m from movies m where m.name = :name")       // using @query
+    @Query("SELECT m from Movie m where m.name = :name")       // using @query
     public List<Movie> findByName(@Param("name") String name);
+    @Query("SELECT m from Movie m where m.rating BETWEEN :below AND :above")
+    public List<Movie> filterByRating(@Param("below") float belowRating,@Param("above") float aboveRating);
 }

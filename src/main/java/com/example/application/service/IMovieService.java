@@ -8,5 +8,6 @@ public interface IMovieService {
 
     List<Movie> findAll();
     List<Movie> findByName(String name);
+    List<Movie> filterByRating(float belowRating, float aboveRating);
 
 }

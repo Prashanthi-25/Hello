@@ -21,9 +21,13 @@ public class MovieService implements IMovieService {
 
         return movies;
     }
-
     @Override
     public List<Movie> findByName(String name) {
         return repository.findByName(name);
+    }
+
+    @Override
+    public List<Movie> filterByRating(float belowRating, float aboveRating) {
+        return repository.filterByRating(belowRating,aboveRating);
     }
 }
