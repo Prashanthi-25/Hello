@@ -1,6 +1,11 @@
+/home/neutronstar/Hello/src/main/java/com/example/application/service/ICastService.java
+/home/neutronstar/Hello/src/main/java/com/example/application/model/MovieCastMapping.java
 /home/neutronstar/Hello/src/main/java/com/example/application/controllers/MovieController.java
 /home/neutronstar/Hello/src/main/java/com/example/application/model/Movie.java
 /home/neutronstar/Hello/src/main/java/com/example/application/repository/MovieRepository.java
+/home/neutronstar/Hello/src/main/java/com/example/application/repository/CastRepository.java
 /home/neutronstar/Hello/src/main/java/com/example/application/Application.java
 /home/neutronstar/Hello/src/main/java/com/example/application/service/MovieService.java
 /home/neutronstar/Hello/src/main/java/com/example/application/service/IMovieService.java
+/home/neutronstar/Hello/src/main/java/com/example/application/model/Cast.java
+/home/neutronstar/Hello/src/main/java/com/example/application/service/CastService.java
