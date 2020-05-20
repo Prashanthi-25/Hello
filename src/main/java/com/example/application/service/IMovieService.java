@@ -4,9 +4,7 @@ import java.util.List;
 
 public interface IMovieService {
 
-    List<Movie> findAll();
     List<Movie> findByName(String name);
     List<Movie> filterByRating(float belowRating, float aboveRating);
-    List<Movie> sortByRating();
-    List<Movie> listMovies();
+    List<Movie> sortBy();
 }

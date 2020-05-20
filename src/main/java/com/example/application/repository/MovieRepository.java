@@ -13,7 +13,9 @@ public interface MovieRepository extends CrudRepository<Movie, Long> {
     @Query("SELECT m from Movie m where m.rating BETWEEN :below AND :above")
     public List<Movie> filterByRating(@Param("below") float belowRating,@Param("above") float aboveRating);
     @Query("SELECT m from Movie m ORDER BY m.rating DESC")
-    List<Movie> sortByRating();
-    @Query("SELECT m from Movie m INNER JOIN MovieCastMapping p ON p.movie_id = m.id")
-    public List<Movie> listMovies();
+    List<Movie> sortBy();
 }
+
+
+
+

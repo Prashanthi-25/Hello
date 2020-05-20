@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CastRepository extends CrudRepository<Cast, Long> {
-    @Query("SELECT c from Cast c INNER JOIN MovieCastMapping p ON p.cast_id = c.id where p.movie_id = :id ")
+    @Query("SELECT c from Cast c INNER JOIN MovieCastMapping p ON p.cast_id = c.id AND p.movie_id = :id ")
     public List<Cast> listCasts(@Param("id") Long movie_id);
 }

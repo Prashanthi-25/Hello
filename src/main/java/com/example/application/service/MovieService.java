@@ -12,14 +12,6 @@ public class MovieService implements IMovieService {
     private MovieRepository repository;
 
     @Override
-    public List<Movie> findAll() {
-
-        List<Movie> movies = (List<Movie>) repository.findAll();
-
-        return movies;
-    }
-
-    @Override
     public List<Movie> findByName(String name) {
         return repository.findByName(name);
     }
@@ -30,12 +22,7 @@ public class MovieService implements IMovieService {
     }
 
     @Override
-    public List<Movie> sortByRating() {
-        return repository.sortByRating();
-    }
-
-    @Override
-    public List<Movie> listMovies() {
-        return repository.listMovies();
+    public List<Movie> sortBy() {
+        return repository.sortBy();
     }
 }
